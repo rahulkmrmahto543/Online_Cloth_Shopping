@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Page Title</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+	crossorigin="anonymous">
+<style>
+body {
+	background-image: url(images/bg1.jpg);
+	background-repeat: none;
+	background-size: cover;
+	background-position: top;
+	
+}
+
+
+/* Add some basic styling for the navbar */
+ul.navbar {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li.nav-item {
+	float: left;
+}
+
+a.nav-link {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+a.nav-link:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+.welcome {
+	align-items: center;
+	text-align: center;
+	color: white;
+}
+/* discount styles.css for 50% sale */
+
+body {
+    position: relative;
+}
+
+.popping-sale {
+    position: fixed;
+    bottom: 200px;
+    right: 40px;
+    z-index: 1000; /* Adjust the z-index to ensure the GIF appears above other elements */
+    animation: popAnimation 0.5s ease-in-out infinite;
+}
+
+@keyframes popAnimation {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+
+
+
+
+
+
+.welcome-text h1 {
+	font-size: 100px;
+	text-align: center;
+}
+
+.navbar-nav {
+	display: flex;
+}
+
+.product-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+header {
+	position: fixed;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.5rem 1%;
+	z-index: 100;
+	background-color:skyblue;
+}
+
+.logo img {
+	height: 8vh;
+	margin-left: 1vh;
+}
+
+nav a {
+	color: var(--text-color);
+	padding: 1rem;
+	font-size: 1.25rem;
+	position: relative;
+	right: 10vh;
+	transition: 0.3s ease-in;
+	text-decoration: none;
+}
+
+
+nav i {
+	font-size: 1.5rem;
+	padding: 5px;
+}
+
+.active,
+.nav a:hover {
+	color:white;
+	font-size: 2rem;
+	box-shadow: 0 0 10px 5px black;
+	border-radius: 5px;
+	padding: 3px;
+}
+/* styles.css */
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366; /* WhatsApp green color */
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.whatsapp-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+</style>
+
+
+
+
+</head>
+
+<body>
+	<header class="header">
+		<a href="/">
+			<div class="logo"><img src="images/logo.png"></div>
+		</a>
+		<nav class="nav">
+			<a href="login"><i class='bx bxs-log-in-circle'></i>LOGIN</a>
+			<a href="register"><i class='bx bxs-user'></i>REGISTER</a>
+			<a href="cart"><i class='bx bxs-phone'></i>CART</a>
+			<a href="products"><i class='bx bxs-phone'></i>PRODUCTS</a>
+			
+			<form class="d-flex" role="search">
+				<input class="form-control me-2" type="search" placeholder="Search"
+					aria-label="Search">
+				<button class="btn btn-outline-success" type="submit">Search</button>
+			</form>
+		</nav>
+		
+		<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file (if separate) -->
+</head>
+<body>
+
+
+
+    <!-- WhatsApp button -->
+    <div class="whatsapp-button">
+        <a href="https://wa.me/+917004126171" target="_blank" rel="noopener noreferrer">
+            <img src="images/wp.png" alt="WhatsApp Icon">
+            CUSTOMER SUPPORT
+        </a>
+    </div>
+
+</body>
+</html>
+
+
+
+
+<!-- 50%off discount -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ecommerce </title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file (if separate) -->
+</head>
+<body>
+    <!-- Popping sale GIF -->
+    <div class="popping-sale">
+     
+        
+         <a href="/">
+         <img src="images/discount.gif" alt="Description of the image" width="200" height="250">
+    </a>
+    </div>
+
+</body>
+</html>
+		
+		
+		
+		
+	</header>
+
+
+
+	<div class="welcome">
+		<h1 class="welcome-text">Welcome to Clothing Store</h1>
+	</div>
+
+	<div class="product-container">
+		<div th:each="product : ${products}">
+			<div class="ms-5 card" style="width: 18rem;">
+				<img
+					src="https://designmodo.com/wp-content/uploads/2015/06/1-Tutorial.jpg"
+					class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title" th:text="${product.productName}"></h5>
+					<p class="card-text" th:text="${product.description}"></p>
+					<p class="card-text" th:text="${product.price}"></p>
+					<a href="@{/addtocart(id=${product.id})}" class="btn btn-primary">Add
+						to Cart</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
